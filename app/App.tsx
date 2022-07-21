@@ -66,4 +66,5 @@ const styles = StyleSheet.create({
     fontFamily: 'monospace, monospace',
   },
 });
+
 export default App;

@@ -8,15 +8,11 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "start-web": "react-scripts start"
+    "web": "cd web && yarn next"
   },
   "dependencies": {
     "react": "^18.1.0",
-    "react-dom": "^18.2.0",
-    "react-native": "0.69.1",
-    "react-native-web": "^0.18.7",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-native": "0.69.1"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",

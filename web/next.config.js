@@ -1,19 +1,22 @@
-module.exports = {
-  experimental: {
-    externalDir: true,
-  },
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...(config.resolve.alias || {}),
-      // Transform all direct `react-native` imports to `react-native-web`
-      'react-native$': 'react-native-web',
-    }
-    config.resolve.extensions = [
-      '.web.js',
-      '.web.ts',
-      '.web.tsx',
-      ...config.resolve.extensions,
-    ]
-    return config
-  },
-}
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  webpack5: true,
+};
+
+const {withExpo} = require('@expo/next-adapter');
+const withPlugins = require('next-compose-plugins');
+const withTM = require('next-transpile-modules')([
+  'solito',
+  // 'dripsy',
+  // '@dripsy/core',
+  // 'moti',
+  // '@motify/core',
+  // '@motify/components',
+  'app',
+]);
+
+module.exports = withPlugins(
+  [withTM, [withExpo, {projectRoot: __dirname}]],
+  nextConfig,
+);

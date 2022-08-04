@@ -31,7 +31,7 @@ function HomeScreen() {
         <Link href="https://github.com/necolas/react-native-web">
           React Native for Web
         </Link>{' '}
-        <TextLink href="/screens/detail">Details</TextLink>
+        <TextLink href="/detail">Details</TextLink>
       </Text>
     </View>
   );
@@ -50,12 +50,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: 'bold',
-    fontSize: '1.5',
-    marginVertical: '1',
+    fontSize: '1.5pt',
+    marginVertical: '1pt',
     textAlign: 'center',
   },
   text: {
-    marginVertical: '1',
+    marginVertical: '1pt',
     textAlign: 'center',
     color: 'red',
     fontSize: 20,

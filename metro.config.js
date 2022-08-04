@@ -14,4 +14,11 @@ module.exports = {
       },
     }),
   },
+  resolver: {
+    nodeModulesPaths: ['./node_modules'],
+    blockList: [
+      new RegExp('./app/node_modules/.*'),
+      new RegExp('./web/node_modules/.*'),
+    ],
+  },
 };

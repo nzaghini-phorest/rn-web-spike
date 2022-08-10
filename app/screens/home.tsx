@@ -3,16 +3,6 @@ import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import {TextLink} from 'solito/link';
 import styled from 'styled-components/native';
 
-function Link(props: any) {
-  return (
-    <Text
-      {...props}
-      accessibilityRole="link"
-      style={StyleSheet.compose(styles.link, props.style)}
-    />
-  );
-}
-
 function HomeScreen() {
   return (
     <View style={styles.container}>
@@ -23,17 +13,9 @@ function HomeScreen() {
         This starter project enables you to build web application using React
         Native module. .
       </Text>
-      <Text style={styles.text}>
-        Built with{' '}
-        <Link href="https://github.com/facebook/create-react-app">
-          Create React App
-        </Link>{' '}
-        and{' '}
-        <Link href="https://github.com/necolas/react-native-web">
-          React Native for Web
-        </Link>{' '}
-        <TextLink href="/detail">Details</TextLink>
-      </Text>
+      <Link textProps={{style: {color: 'blue'}}} href="/detail">
+        Details
+      </Link>
     </View>
   );
 }
@@ -73,6 +55,10 @@ const Title = styled(Text)`
   font-size: 25px;
   text-align: center;
   color: palevioletred;
+`;
+
+const Link = styled(TextLink)`
+  color: blue;
 `;
 
 export default HomeScreen;

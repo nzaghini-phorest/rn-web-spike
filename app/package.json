@@ -10,7 +10,8 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "react-native-web": "^0.18.6",
-    "solito": "latest"
+    "solito": "latest",
+    "react-native-web-lottie": "^1.4.4"
   },
   "sideEffects": false
 }

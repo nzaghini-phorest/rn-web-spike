@@ -1,5 +1,6 @@
 import React from 'react';
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
+import {TextLink} from 'solito/link';
 
 function DetailScreen() {
   return (
@@ -8,6 +9,7 @@ function DetailScreen() {
         <Text>Welcome to React Native for Web</Text>
       </View>
       <Text>DETAILS PAGE!</Text>
+      <TextLink href="/">👈 Go Home</TextLink>
     </View>
   );
 }

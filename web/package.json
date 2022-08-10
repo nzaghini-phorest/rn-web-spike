@@ -8,9 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@expo/next-adapter": "^3.1.20",
     "app": "*",
     "next": "latest",
-    "@expo/next-adapter": "^3.1.20",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-native-web": "^0.18.6",

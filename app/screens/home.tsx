@@ -1,6 +1,7 @@
 import React from 'react';
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import {TextLink} from 'solito/link';
+import styled from 'styled-components/native';
 
 function Link(props: any) {
   return (
@@ -16,7 +17,7 @@ function HomeScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text>Welcome to React Native for Web</Text>
+        <Title>Welcome to React Native for Web</Title>
       </View>
       <Text>
         This starter project enables you to build web application using React
@@ -67,5 +68,11 @@ const styles = StyleSheet.create({
     fontFamily: 'monospace, monospace',
   },
 });
+
+const Title = styled(Text)`
+  font-size: 25px;
+  text-align: center;
+  color: palevioletred;
+`;
 
 export default HomeScreen;
